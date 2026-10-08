@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAGIC iPHONE</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+#welcome{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:radial-gradient(circle,#202020,#000 70%);
+}
+
+#welcome h1{
+    font-size:clamp(42px,8vw,90px);
+    letter-spacing:4px;
+}
+
+#welcome p{
+    color:#aaa;
+    margin:15px 0 35px;
+    font-size:18px;
+}
+
+.start{
+    padding:16px 50px;
+    border:0;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.start:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px #fff4;
+}
+
+#main{
+    display:none;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    padding:20px;
+    text-align:center;
+    background:#080808ee;
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #222;
+}
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    color:#888;
+    margin-top:15px;
+}
+
+.family{
+    padding:60px 6%;
+}
+
+.family h2{
+    font-size:42px;
+    margin-bottom:30px;
+    border-left:4px solid white;
+    padding-left:15px;
+}
+
+.models{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#101010;
+    border:1px solid #242424;
+    border-radius:24px;
+    padding:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#555;
+}
+
+.card h3{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.views{
+    display:flex;
+    gap:10px;
+}
+
+.view{
+    width:50%;
+    text-align:center;
+    color:#777;
+    font-size:12px;
+}
+
+.view img{
+    width:100%;
+    height:270px;
+    object-fit:contain;
+    display:block;
+    border-radius:15px;
+    background:#080808;
+}
+
+.feedback{
+    background:#0d0d0d;
+    padding:80px 20px;
+}
+
+.feedback-box{
+    max-width:650px;
+    margin:auto;
+}
+
+.feedback h2{
+    text-align:center;
+    font-size:40px;
+}
+
+.feedback p{
+    text-align:center;
+    color:#888;
+    margin:12px 0 30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+input,textarea{
+    background:#161616;
+    color:white;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:16px;
+    font-size:16px;
+    outline:none;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+form button{
+    padding:16px;
+    border:0;
+    border-radius:12px;
+    background:white;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    color:#666;
+    padding:30px;
+    border-top:1px solid #222;
+}
+
+@media(max-width:600px){
+
+    .family{
+        padding:45px 15px;
+    }
+
+    .family h2{
+        font-size:32px;
+    }
+
+    .view img{
+        height:220px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- WELCOME -->
+<section id="welcome">
+
+    <h1>MAGIC iPHONE</h1>
+
+    <p>Explore the iPhone generations</p>
+
+    <button class="start" onclick="startSite()">
+        START
+    </button>
+
+</section>
+
+
+<!-- MAIN -->
+<div id="main">
+
+<header>
+    <h2>MAGIC iPHONE</h2>
+</header>
+
+
+<section class="hero">
+
+    <h1>iPhone</h1>
+
+    <p>
+        iPhone 14 • 15 • 16 • 17 • 18 • Duo
+    </p>
+
+</section>
+
+
+<!-- ================= iPHONE 14 ================= -->
+
+<section class="family">
+
+<h2>iPhone 14</h2>
+
+<div class="models">
+
+<div class="card">
+<h3>iPhone 14</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20-%203.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20view%20of%20iPhone%2014%20Blue.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 14 Plus</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20-%203.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20view%20of%20iPhone%2014%20Blue.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 14 Pro</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20Pro%20-%203.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20Pro%20-%20black.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 14 Pro Max</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20Pro%20-%203.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20Pro%20-%20black%20%282%29.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= iPHONE 15 ================= -->
+
+<section class="family">
+
+<h2>iPhone 15</h2>
+
+<div class="models">
+
+<div class="card">
+<h3>iPhone 15</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20iPhone%2015.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20of%20iPhone%2015.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 15 Plus</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20iPhone%2015.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20view%20of%20iPhone%2015%20Blue.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 15 Pro</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20iPhone%2015.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20and%20side%20of%20iPhone%2015.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 15 Pro Max</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Apple%20iPhone%2015.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20and%20side%20of%20iPhone%2015.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= iPHONE 16 ================= -->
+
+<section class="family">
+
+<h2>iPhone 16</h2>
+
+<div class="models">
+
+<div class="card">
+<h3>iPhone 16</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Iphone%2016%20mit%20Display.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20of%20iPhone%2016.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 16 Plus</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Iphone%2016%20mit%20Display.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20view%20of%20iPhone%2016%20in%20Pink.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 16 Pro</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2016%20%2854251926561%29.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2016%20Ultramarine%20Rear.png">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 16 Pro Max</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2016%20%2854251926606%29.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2016%20Pro%20Max%20Desert%20Titanium%20Rear.png">
+Back
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= iPHONE 17 ================= -->
+
+<section class="family">
+
+<h2>iPhone 17</h2>
+
+<div class="models">
+
+<div class="card">
+<h3>iPhone 17</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20%28Lavender%29%20-%20Backside.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20%28Lavender%29%20-%20Backside.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 17 Air</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20%28Lavender%29%20-%20Backside.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20%28Lavender%29%20-%20Backside.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 17 Pro</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20Pro%20%28Silver%29%20-%20Backside.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20Pro%20%28Silver%29%20-%20Backside.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+<h3>iPhone 17 Pro Max</h3>
+
+<div class="views">
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20Pro%20Max%20%28Cosmic%20Orange%29%20-%20Backside.jpg">
+Front
+</div>
+
+<div class="view">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2017%20Pro%20Max%20%28Cosmic%20Orange%29%20-%20Backside.jpg">
+Back
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= iPHONE 18 + DUO ================= -->
+
+<section class="family">
+
+<h2>iPhone 18 &amp; Duo</h2>
+
+<div class="models">
+
+
+<!-- iPHONE 18 -->
+
+<div class="card">
+
+<h3>iPhone 18</h3>
+
+<div class="views">
+
+<div class="view">
+
+<img
+src="iphone18-1.jfif"
+alt="iPhone 18"
+>
+
+iPhone 18
+
+</div>
+
+
+<div class="view">
+
+<img
+src="iphone18-2.jfif"
+alt="iPhone 18 Burgundy"
+>
+
+iPhone 18 Burgundy
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- IPHONE DUO -->
+
+<div class="card">
+
+<h3>iPhone Duo</h3>
+
+<div class="views">
+
+<div class="view">
+
+<img
+src="iphone-duo.webp"
+alt="iPhone Duo"
+>
+
+iPhone Duo
+
+</div>
+
+
+<div class="view">
+
+<img
+src="iphone18-brown.jfif"
+alt="iPhone 18 Brown"
+>
+
+iPhone 18 Brown
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= FEEDBACK ================= -->
+
+<section class="feedback">
+
+<div class="feedback-box">
+
+<h2>YOUR FEEDBACK</h2>
+
+<p>
+Tell us what you think about MAGIC iPHONE.
+</p>
+
+<form
+action="https://formspree.io/f/mvkzklor"
+method="POST"
+>
+
+<input
+type="text"
+name="name"
+placeholder="Your name"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Your email"
+required
+>
+
+<textarea
+name="message"
+placeholder="Write your feedback..."
+required
+></textarea>
+
+<button type="submit">
+SEND FEEDBACK
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2026 MAGIC iPHONE
+</footer>
+
+</div>
+
+
+<script>
+
+function startSite(){
+
+    document.getElementById("welcome").style.display="none";
+
+    document.getElementById("main").style.display="block";
+
+    window.scrollTo(0,0);
+
+}
+
+</script>
+
+</body>
+</html>
